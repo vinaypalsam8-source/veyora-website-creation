@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Veyora — Next-Gen Website Creation & Digital Experience Studio</title>
+  <meta name="description" content="Veyora creates high-converting, lightning-fast modern websites, SaaS applications, and e-commerce platforms with bespoke design and modern engineering." />
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Orbs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-grid"></div>
+
+  <!-- ========================================================================
+       HEADER & NAVIGATION
+       ======================================================================== -->
+  <header class="site-header" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="brand-glyph">V</div>
+        <span>Veyora<span style="color: var(--accent-light);">.</span></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#demos" class="nav-link">Website Demos</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#estimator" class="nav-link">Cost Calculator</a></li>
+        <li><a href="#process" class="nav-link">Process</a></li>
+        <li><a href="#testimonials" class="nav-link">Client Impact</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Light / Dark Theme Switcher Button -->
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme" title="Toggle Light / Dark Mode">
+          <span id="theme-icon">☀️</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary">Start a Project →</a>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Open Menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero-section">
+    <div class="container hero-content">
+      <div class="badge-pill">
+        <span class="badge-pulse-dot"></span>
+        <span>Accepting Select Projects for Q2 / Q3 • 100% Speed Guarantee</span>
+      </div>
+
+      <h1 class="hero-title">
+        We Craft <span class="gradient-text">High-Converting</span> Digital Experiences & Next-Gen Websites.
+      </h1>
+
+      <p class="hero-desc">
+        Veyora is an elite digital creation studio. We blend architectural aesthetics, bespoke UI/UX, and bleeding-edge full-stack engineering to build web platforms that outshine your competition.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#demos" class="btn btn-primary">Explore 5 Live Demos ✦</a>
+        <a href="#estimator" class="btn btn-secondary">⚡ Calculate Project Cost</a>
+      </div>
+
+      <!-- Live Metric Strip -->
+      <div class="hero-metrics-strip">
+        <div class="metric-item">
+          <span class="metric-number" data-target="45">45+</span>
+          <span class="metric-label">Websites Delivered</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number" data-target="99.8">99.8%</span>
+          <span class="metric-label">Avg. Lighthouse Score</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number" data-target="2.8">2.8x</span>
+          <span class="metric-label">Avg. Conversion Increase</span>
+        </div>
+        <div class="metric-item">
+          <span class="metric-number">0.38s</span>
+          <span class="metric-label">Sub-Second Load Time</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SHOWCASE SECTION (5 RICH INTERACTIVE WEBSITE DEMOS)
+       ======================================================================== -->
+  <section class="section-padding" id="demos">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-subtitle">Portfolio & Interactive Prototypes</div>
+        <h2 class="section-title">5 Custom Website Creations</h2>
+        <p class="section-desc">
+          Click on any website demo to launch our <strong>Live Device Sandbox</strong>. Test the interactive calculators, booking widgets, and responsive breakpoints in real time.
+        </p>
+      </div>
+
+      <!-- Filter Bar -->
+      <div class="filter-bar">
+        <button class="filter-btn active" data-filter="all">All Projects (5)</button>
+        <button class="filter-btn" data-filter="saas">Fintech & SaaS (2)</button>
+        <button class="filter-btn" data-filter="healthcare">Healthcare & Booking (1)</button>
+        <button class="filter-btn" data-filter="ecommerce">Luxury E-Commerce (1)</button>
+        <button class="filter-btn" data-filter="realestate">Prime Real Estate (1)</button>
+      </div>
+
+      <!-- Demos Container Grid -->
+      <div class="demos-grid" id="demos-grid-container">
+        <!-- Rendered dynamically by app.js and demos-data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERACTIVE PROJECT COST & TIMELINE ESTIMATOR
+       ======================================================================== -->
+  <section class="section-padding" id="estimator">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-subtitle">Transparent Pricing</div>
+        <h2 class="section-title">Interactive Project Estimator</h2>
+        <p class="section-desc">
+          Configure your requirements below to calculate an instant estimated investment range, timeline, and deliverables breakdown.
+        </p>
+      </div>
+
+      <div class="estimator-wrapper">
+        <div class="calc-column-left">
+          
+          <!-- Step 1: Project Scope -->
+          <div class="calc-step-block">
+            <h4><span class="step-num">1</span> Select Project Type</h4>
+            <div class="option-pill-grid">
+              <div class="calc-pill selected" data-type="scope" data-price="2800" data-days="14">
+                <span>⚡ High-Impact Landing Page</span>
+                <strong>$2,800+</strong>
+              </div>
+              <div class="calc-pill" data-type="scope" data-price="4900" data-days="21">
+                <span>🏢 Multi-Page Corporate Site</span>
+                <strong>$4,900+</strong>
+              </div>
+              <div class="calc-pill" data-type="scope" data-price="6500" data-days="28">
+                <span>🛍️ Headless E-Commerce Boutique</span>
+                <strong>$6,500+</strong>
+              </div>
+              <div class="calc-pill" data-type="scope" data-price="8900" data-days="35">
+                <span>🚀 Custom SaaS / Web Application</span>
+                <strong>$8,900+</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- Step 2: Desired Features -->
+          <div class="calc-step-block">
+            <h4><span class="step-num">2</span> Desired Features & Capabilities</h4>
+            <div class="features-calc-grid">
+              <label class="feature-check-card checked">
+                <input type="checkbox" data-feature-price="600" data-feature-days="3" checked />
+                <span>Headless CMS Integration (Sanity / Strapi)</span>
+              </label>
+              <label class="feature-check-card checked">
+                <input type="checkbox" data-feature-price="850" data-feature-days="4" checked />
+                <span>Custom Micro-Interactions & 3D WebGL</span>
+              </label>
+              <label class="feature-check-card">
+                <input type="checkbox" data-feature-price="750" data-feature-days="3" />
+                <span>Stripe / Global Payment Gateways</span>
+              </label>
+              <label class="feature-check-card">
+                <input type="checkbox" data-feature-price="1200" data-feature-days="5" />
+                <span>Custom AI Assistant / API Automation</span>
+              </label>
+              <label class="feature-check-card checked">
+                <input type="checkbox" data-feature-price="500" data-feature-days="2" checked />
+                <span>Full Core Web Vitals (100 Speed Score)</span>
+              </label>
+              <label class="feature-check-card">
+                <input type="checkbox" data-feature-price="950" data-feature-days="4" />
+                <span>Multi-Language Internationalization (i18n)</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Step 3: Speed / Timeline Urgency -->
+          <div class="calc-step-block">
+            <h4><span class="step-num">3</span> Delivery Pace</h4>
+            <div class="option-pill-grid">
+              <div class="calc-pill selected" data-type="speed" data-multiplier="1.0">
+                <span>Standard Agile Cadence</span>
+                <strong>Regular</strong>
+              </div>
+              <div class="calc-pill" data-type="speed" data-multiplier="1.25">
+                <span>⚡ Priority Sprint (-30% Time)</span>
+                <strong>+25%</strong>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Summary Card -->
+        <div class="calc-summary-card">
+          <div class="summary-head">
+            <h3>Estimated Project Scope</h3>
+            <p>Tailored custom proposal generated live.</p>
+          </div>
+
+          <div class="quote-price-display">
+            <span class="price-range-title">Estimated Investment</span>
+            <span class="live-price-val" id="summary-price">$4,750</span>
+            <div class="delivery-estimate-badge">
+              <span>⏱️ Estimated Delivery:</span>
+              <strong id="summary-timeline">19 - 22 Business Days</strong>
+            </div>
+          </div>
+
+          <ul class="summary-inclusions-list">
+            <li>100% Bespoke Figma Design System</li>
+            <li>Fully Responsive Desktop, Tablet & Mobile</li>
+            <li>SEO Architecture & Analytics Setup</li>
+            <li>Production Deployment & SSL Setup</li>
+            <li>30 Days Post-Launch Dedicated Support</li>
+          </ul>
+
+          <button class="btn btn-primary" id="book-quote-btn" onclick="prefillContactWithQuote()">
+            Lock In This Estimate & Book Call →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       SERVICES & EXPERTISE
+       ======================================================================== -->
+  <section class="section-padding" id="services">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-subtitle">What We Do</div>
+        <h2 class="section-title">Full-Spectrum Web Creation</h2>
+        <p class="section-desc">
+          We combine design mastery with deep technical craftsmanship to engineer websites that convert visitors into loyal clients.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon-box">🎨</div>
+          <h3>Bespoke UI/UX & Brand Design</h3>
+          <p>We craft tailored visual identities and high-fidelity prototypes in Figma that align with your premium brand positioning.</p>
+          <ul class="service-points">
+            <li>Wireframing & User Journey Mapping</li>
+            <li>Interactive Design Systems</li>
+            <li>Custom 3D & Vector Asset Creation</li>
+          </ul>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon-box">⚡</div>
+          <h3>Modern Full-Stack Development</h3>
+          <p>Clean, modular code built on Next.js, React, Astro, and Tailwind CSS for speed, maintainability, and enterprise-grade security.</p>
+          <ul class="service-points">
+            <li>Sub-second page rendering</li>
+            <li>Accessible WCAG 2.1 AA Compliance</li>
+            <li>Micro-animations with GSAP / Framer Motion</li>
+          </ul>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon-box">🛍️</div>
+          <h3>Headless E-Commerce</h3>
+          <p>Transform your online store into a frictionless luxury shopping experience with Shopify Headless and custom checkouts.</p>
+          <ul class="service-points">
+            <li>Instant slide-over carts</li>
+            <li>Custom product configurators</li>
+            <li>Stripe, Apple Pay & Global Tax integration</li>
+          </ul>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon-box">🤖</div>
+          <h3>AI Workflows & Interactive Apps</h3>
+          <p>Equip your website with intelligent AI search, customer assistants, dynamic dashboards, and custom client portals.</p>
+          <ul class="service-points">
+            <li>OpenAI / Claude LLM integration</li>
+            <li>Dynamic real-time calculators</li>
+            <li>Secure user authentication & databases</li>
+          </ul>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon-box">📈</div>
+          <h3>SEO & Conversion Optimization</h3>
+          <p>We architect your site from the ground up for maximum organic search dominance and measurable conversion growth.</p>
+          <ul class="service-points">
+            <li>100 Google Lighthouse speed target</li>
+            <li>Structured schema markup & metadata</li>
+            <li>Heatmap tracking & A/B testing setup</li>
+          </ul>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon-box">🛡️</div>
+          <h3>Hyper-Care & Growth Retainers</h3>
+          <p>We keep your digital assets updated, blisteringly fast, and continuously evolving as your business scales.</p>
+          <ul class="service-points">
+            <li>24/7 Uptime & Security Monitoring</li>
+            <li>Monthly feature expansions</li>
+            <li>Dedicated developer direct access</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROCESS ROADMAP
+       ======================================================================== -->
+  <section class="section-padding" id="process">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-subtitle">How We Work</div>
+        <h2 class="section-title">Our 4-Stage Creation Engine</h2>
+        <p class="section-desc">
+          A proven, transparent workflow designed to take you from initial concept to a world-class live launch in under 4 weeks.
+        </p>
+      </div>
+
+      <div class="process-steps-grid">
+        <div class="process-step-card">
+          <span class="step-marker">STAGE 01</span>
+          <h4>Discovery & Strategy</h4>
+          <p>We analyze your target market, competitors, value propositions, and information architecture to craft an airtight blueprint.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-marker">STAGE 02</span>
+          <h4>Bespoke UI/UX Design</h4>
+          <p>We create pixel-perfect Figma designs, custom design systems, and clickable prototypes for your comprehensive review.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-marker">STAGE 03</span>
+          <h4>Modern Code Engineering</h4>
+          <p>We convert designs into blazing fast, responsive code with seamless backend integrations, animations, and CMS connections.</p>
+        </div>
+
+        <div class="process-step-card">
+          <span class="step-marker">STAGE 04</span>
+          <h4>QA, Speed Tuning & Launch</h4>
+          <p>We run cross-browser stress tests, optimize Core Web Vitals, configure custom domains, and celebrate your global launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       TESTIMONIALS & CLIENT IMPACT
+       ======================================================================== -->
+  <section class="section-padding" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-subtitle">Verified Results</div>
+        <h2 class="section-title">Trusted by Forward-Thinking Brands</h2>
+        <p class="section-desc">See how our custom web creations deliver measurable commercial results.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote">
+            "Veyora transformed Lumina Pay from an unknown concept into a high-trust fintech powerhouse. Our signup conversions jumped by 182% within 30 days of launch."
+          </p>
+          <div class="test-author-row">
+            <div class="author-avatar-chip">AV</div>
+            <div class="author-info">
+              <strong>Alexander Vance</strong>
+              <span>CEO & Founder, Lumina Pay</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote">
+            "The online booking portal and aesthetic design Veyora built for Aura filled our clinical calendar for 6 months straight. The speed and elegance are unmatched."
+          </p>
+          <div class="test-author-row">
+            <div class="author-avatar-chip">VC</div>
+            <div class="author-info">
+              <strong>Dr. Vivienne Chen</strong>
+              <span>Managing Director, Aura Health Studio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="test-stars">★★★★★</div>
+          <p class="test-quote">
+            "We needed a developer-first site with interactive terminals for NovaForge. Veyora executed in 3 weeks flat with a 100/100 Lighthouse score."
+          </p>
+          <div class="test-author-row">
+            <div class="author-avatar-chip">MR</div>
+            <div class="author-info">
+              <strong>Marcus Reynolds</strong>
+              <span>Head of Product, NovaForge AI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT & CONSULTATION SCHEDULER
+       ======================================================================== -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="contact-section-wrapper">
+        <div class="contact-left">
+          <div class="section-subtitle">Let's Build Something Extraordinary</div>
+          <h2>Ready to elevate your digital presence?</h2>
+          <p>
+            Tell us about your goals and vision. We will review your project and get back to you within 24 hours with a strategic blueprint and next steps.
+          </p>
+
+          <div class="direct-contact-items">
+            <div class="direct-item">
+              <div class="direct-icon">✉️</div>
+              <div>
+                <span>DIRECT EMAIL</span>
+                <strong>hello@veyorastudio.com</strong>
+              </div>
+            </div>
+            <div class="direct-item">
+              <div class="direct-icon">💬</div>
+              <div>
+                <span>WHATSAPP / TELEGRAM</span>
+                <strong>+1 (800) 839-6721</strong>
+              </div>
+            </div>
+            <div class="direct-item">
+              <div class="direct-icon">📍</div>
+              <div>
+                <span>STUDIO LOCATIONS</span>
+                <strong>San Francisco • London • Remote Worldwide</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <form class="contact-form" id="consultation-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="client-name">Your Full Name *</label>
+                <input type="text" id="client-name" placeholder="e.g. Alex Morgan" required />
+              </div>
+              <div class="form-field">
+                <label for="client-email">Business Email *</label>
+                <input type="email" id="client-email" placeholder="alex@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-group-row">
+              <div class="form-field">
+                <label for="client-service">Primary Goal / Service</label>
+                <select id="client-service">
+                  <option value="landing">New Website Creation</option>
+                  <option value="redesign">Website Redesign & Speed Optimization</option>
+                  <option value="ecommerce">Headless E-Commerce Store</option>
+                  <option value="saas">SaaS / Web Application Development</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="client-budget">Estimated Budget</label>
+                <select id="client-budget">
+                  <option value="3k-5k">$3,000 - $5,000</option>
+                  <option value="5k-10k" selected>$5,000 - $10,000</option>
+                  <option value="10k-25k">$10,000 - $25,000</option>
+                  <option value="25k+">$25,000+</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="client-notes">Project Details & Vision</label>
+              <textarea id="client-notes" rows="4" placeholder="Briefly describe your vision, target audience, timeline, or current website URL..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem;">
+              Send Project Inquiry ✦
+            </button>
+
+            <div id="contact-toast" class="toast-notification">
+              🎉 <strong>Thank You!</strong> Your inquiry has been received. A senior Veyora strategist will reach out within 24 hours with your preliminary roadmap.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo">
+            <div class="brand-glyph">V</div>
+            <span>Veyora<span style="color: var(--accent-light);">.</span></span>
+          </a>
+          <p>
+            Architecting modern, ultra-responsive digital websites and web applications for ambitious leaders worldwide.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Website Demos</h5>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="openDemoModalById('lumina-pay')">Lumina Pay (Fintech)</a></li>
+            <li><a href="javascript:void(0)" onclick="openDemoModalById('aura-wellness')">Aura Clinic (Medical)</a></li>
+            <li><a href="javascript:void(0)" onclick="openDemoModalById('novaforge-ai')">NovaForge AI (Developer)</a></li>
+            <li><a href="javascript:void(0)" onclick="openDemoModalById('elysian-bloom')">Elysian Bloom (Luxury)</a></li>
+            <li><a href="javascript:void(0)" onclick="openDemoModalById('horizon-living')">Horizon Living (Real Estate)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <ul class="footer-links">
+            <li><a href="#demos">Portfolio</a></li>
+            <li><a href="#estimator">Cost Calculator</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Our Engine</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Technologies</h5>
+          <ul class="footer-links">
+            <li><a href="#services">Next.js 14 & React</a></li>
+            <li><a href="#services">Tailwind CSS & WebGL</a></li>
+            <li><a href="#services">Shopify Headless</a></li>
+            <li><a href="#services">Supabase & TypeScript</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 Veyora Web Studio. All rights reserved.</div>
+        <div>Crafted with precision • Modern Blue & White Experience</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       INTERACTIVE LIVE DEVICE SANDBOX MODAL
+       ======================================================================== -->
+  <div class="demo-modal-backdrop" id="demo-modal" role="dialog" aria-modal="true">
+    <div class="demo-modal-container">
+      
+      <!-- Top Modal Toolbar -->
+      <div class="modal-top-bar">
+        <div class="modal-proj-info">
+          <div class="brand-glyph" style="width: 28px; height: 28px; font-size: 0.9rem;">V</div>
+          <span class="modal-proj-title" id="modal-project-title">Demo Preview</span>
+        </div>
+
+        <!-- Viewport Switcher Controls -->
+        <div class="modal-viewport-controls">
+          <button class="viewport-btn active" data-view="desktop" onclick="setDeviceView('desktop')">
+            💻 Desktop
+          </button>
+          <button class="viewport-btn" data-view="tablet" onclick="setDeviceView('tablet')">
+            📱 Tablet
+          </button>
+          <button class="viewport-btn" data-view="mobile" onclick="setDeviceView('mobile')">
+            📲 Mobile
+          </button>
+        </div>
+
+        <!-- Close Modal Button -->
+        <button class="modal-close-btn" onclick="closeDemoModal()" aria-label="Close Preview">✕</button>
+      </div>
+
+      <!-- Main Interactive Viewport Frame -->
+      <div class="modal-main-viewport">
+        <div class="device-frame-wrapper view-desktop" id="device-frame">
+          <div id="device-screen-content">
+            <!-- Dynamic interactive mockup injected here -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="demos-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

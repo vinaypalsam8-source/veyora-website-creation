@@ -1,0 +1,10 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# Node dependencies (if any)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
